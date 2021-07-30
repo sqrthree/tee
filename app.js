@@ -11,8 +11,7 @@ const reporter =
 consola.setReporters(reporter)
 
 module.exports = async (req, res) => {
-  const { method } = req
-  const headers = _.pick(req.headers, ['request-id'])
+  const { method, headers } = req
 
   let url = req.url
 
