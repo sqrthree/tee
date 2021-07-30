@@ -38,7 +38,7 @@ test('should output get request', async () => {
     url: '/',
     headers: {},
     query: {},
-    body: {},
+    body: '',
   })
 })
 
@@ -57,7 +57,7 @@ test('should output url of get request', async () => {
     url: '/api/debug',
     headers: {},
     query: {},
-    body: {},
+    body: '',
   })
 })
 
@@ -79,7 +79,7 @@ test('should output query of get request', async () => {
       a: '1',
       b: '2',
     },
-    body: {},
+    body: '',
   })
 })
 
@@ -104,7 +104,7 @@ test('should output searchParams of get request', async () => {
     query: {
       query: 'a b',
     },
-    body: {},
+    body: '',
   })
 })
 
@@ -129,7 +129,7 @@ test('should output headers of get request', async () => {
       'request-id': 'e1034572-58f9-42b1-b06f-bfcbcb6e2ac4',
     },
     query: {},
-    body: {},
+    body: '',
   })
 })
 
@@ -152,9 +152,9 @@ test('should output json body of post request', async () => {
     url: '/',
     headers: {},
     query: {},
-    body: {
+    body: JSON.stringify({
       a: 1,
-    },
+    }),
   })
 })
 

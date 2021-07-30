@@ -26,10 +26,12 @@ module.exports = async (req, res) => {
     query = _.assign({}, querystring.parse(qs))
   }
 
-  let body = {}
+  let body = ''
 
   try {
-    body = await json(req)
+    const result = await json(req)
+
+    body = JSON.stringify(result)
   } catch (err) {
     try {
       const txt = await text(req)
